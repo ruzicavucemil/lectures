@@ -14,19 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes([
-    "register" => false
-]);
+Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/lectures', 'App\Http\Controllers\LectureController@index');
-Route::get('/lectures/create', 'App\Http\Controllers\LectureController@create')->middleware('auth');
+Route::get('/lectures/create', 'App\Http\Controllers\LectureController@create');
 Route::get('/lectures/{id}', 'App\Http\Controllers\LectureController@show');
-Route::post('/lectures', 'App\Http\Controllers\LectureController@store')->middleware('auth');
-Route::delete('/lectures/{id}', 'App\Http\Controllers\LectureController@destroy')->middleware('auth');
+Route::post('/lectures', 'App\Http\Controllers\LectureController@store');
+Route::delete('/lectures/{id}', 'App\Http\Controllers\LectureController@destroy');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

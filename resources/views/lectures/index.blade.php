@@ -39,6 +39,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Naziv: {{ $lecture->name }}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Tema: {{ $lecture->topic }}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Napisao/la: {{ $lecture->user->email }}</h6>
                             <div class="text-right">
                                 <a href="/lectures/{{ $lecture->id }}" class="card-link text-info">Prikaži više</a>
                             </div>

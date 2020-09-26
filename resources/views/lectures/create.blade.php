@@ -26,6 +26,9 @@
                     <label for="description">Tekst</label>
                     <textarea class="form-control" id="description" rows="3" name="description"></textarea>
                 </div>
+                <div>
+                    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                </div>
                 <button type="submit" class="btn btn-primary">Dodaj</button>
             </form>
         </div>

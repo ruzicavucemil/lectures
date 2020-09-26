@@ -9,7 +9,13 @@ class Lecture extends Model
 {
     use HasFactory;
 
+    protected $with = ['user'];
+
     protected $fillable = [
-        'name', 'description', 'topic'
+        'name', 'description', 'topic', 'user_id'
     ];
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
 }
