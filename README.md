@@ -2,6 +2,7 @@
 
 - run composer install
 - create "lectures" database
+- set db name to lectures in .env file
 - run php artisan migrate
 - run php artisan db:seed
 - run php artisan serve
