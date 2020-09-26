@@ -18,16 +18,16 @@
     @endif --}}
 
     <div class="container">
-        <h1 class="text-center">Lekcije</h1>
+        <h1 class="text-center">Aplikacija za izradu online lekcija</h1>
         <div class="row d-flex justify-content-center">
-            <div>
+           <div>
                 <img src="img/fpmoz_logo.png" alt="">
             </div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div>
+            <!-- <div>
                 <a class="text-info" href="/lectures">Pregled svih lekcija</a>
-            </div>
+            </div> -->
         </div>
     </div>
 @endsection
