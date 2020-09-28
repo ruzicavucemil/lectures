@@ -25,6 +25,6 @@ Route::get('/lectures/create', 'App\Http\Controllers\LectureController@create');
 Route::get('/lectures/{id}', 'App\Http\Controllers\LectureController@show');
 Route::post('/lectures', 'App\Http\Controllers\LectureController@store');
 Route::delete('/lectures/{id}', 'App\Http\Controllers\LectureController@destroy');
-
-
+Route::put('/lectures/{id}/edit', 'App\Http\Controllers\LectureController@edit')->name('lectures.edit');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/lectures/{id}/edit', 'App\Http\Controllers\LectureController@edit_form')->name('lectures.edit');

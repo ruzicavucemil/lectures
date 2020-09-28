@@ -61,4 +61,21 @@ class LectureController extends Controller
 
         return redirect("/lectures")->with('mssg', 'Lekcija obrisana!');
     }
-}
+   
+    public function edit_form(Request $request, $id){
+          $lecture = Lecture::find($id);
+
+         return view('lectures.edit')->with('lecture',$lecture);
+    }
+     public function edit(Request $request, $id){
+         $lecture = Lecture::find($id);
+         $lecture->name = $request->name;
+         $lecture->topic = $request->topic;
+         $lecture->description= $request->description;
+         $lecture->save();
+        
+         return redirect("/lectures")->with('mssg', 'Lekcija uređena!');
+         
+    }
+}   
+

@@ -16,7 +16,16 @@
             <a href="/lectures" class="text-info">Pregled svih lekcija</a>
 
             @if (Auth::user()->id == $lecture->user_id || Auth::user()->role_id == 1)
-                <div>
+                <div>             
+
+              
+
+                  
+                    <button onclick="window.location='{{ $lecture->id }}/edit'" class="btn btn-primary">Uredi</button>
+                   
+
+                    </br>
+
                     <form action="/lectures/{{ $lecture->id }}" method="POST">
                         @csrf
                         @method('DELETE')
